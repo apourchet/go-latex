@@ -1,0 +1,44 @@
+\documentclass[]{article}
+
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{scrextend}
+
+\begin{document}
+\begin{center}
+	Simple table:\\
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\input{./simple_table.tex}
+	\end{tabular}
+\end{center}
+
+\begin{center}
+	Table with lookup:\\
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\input{./table_with_lookup.tex}
+	\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}
+	\begin{axis}[xlabel = $x_1$, ylabel = $x_2$, title = Point Graph, grid=both, mark size = 3, thick]
+	\input{./line_graph.tex}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\begin{center}
+\begin{tikzpicture}
+	\begin{axis}[xlabel = $x_1$, ylabel = $x_2$, title = Point Graph, grid=both, mark size = 3, thick]
+	\input{./point_graph.tex}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\end{document}

@@ -1,4 +1,4 @@
-go-latex
-========
+gotex
+=====
 
 LaTeX library for Golang
