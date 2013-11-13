@@ -23,9 +23,8 @@ type Entry struct {
 func (entry *Entry) ToString() string {
 	if entry.MathMode {
 		return "$" + entry.Value + "$"
-	} else {
-		return entry.Value
 	}
+	return entry.Value
 }
 
 type Table struct {
