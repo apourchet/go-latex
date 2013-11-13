@@ -1,7 +1,7 @@
 package main
 
 import (
-	"./latex"
+	"../../go-latex"
 )
 
 func main() {
