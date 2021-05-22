@@ -48,7 +48,7 @@ func MakeTable(fileName string, entries [][]Entry) {
 		}
 		output.WriteString(str + "\\\\ \\hline\n")
 	}
-	ioutil.WriteFile(fileName, output.Bytes(), 777)
+	ioutil.WriteFile(fileName, output.Bytes(), 0777)
 }
 
 func MakeTableWithLookup(fileName string, tbl Table) {
@@ -64,7 +64,7 @@ func MakeTableWithLookup(fileName string, tbl Table) {
 		}
 		output.WriteString(str + "\\\\ \\hline\n")
 	}
-	ioutil.WriteFile(fileName, output.Bytes(), 777)
+	ioutil.WriteFile(fileName, output.Bytes(), 0777)
 }
 
 func MakeColoredPointGraph(fileName string, labelToMark map[string]string, points []Point) {
@@ -78,7 +78,7 @@ func MakeColoredPointGraph(fileName string, labelToMark map[string]string, point
 		}
 		output.WriteString("};\n")
 	}
-	ioutil.WriteFile(fileName, output.Bytes(), 777)
+	ioutil.WriteFile(fileName, output.Bytes(), 0777)
 }
 
 func MakeLineGraph(fileName string, points []Point) {
@@ -87,7 +87,7 @@ func MakeLineGraph(fileName string, points []Point) {
 		output.WriteString(p.ToString() + "\n")
 	}
 	output.WriteString("};")
-	ioutil.WriteFile(fileName, output.Bytes(), 777)
+	ioutil.WriteFile(fileName, output.Bytes(), 0777)
 }
 
 func SelectPoints(pts []Point, label string) []Point {
